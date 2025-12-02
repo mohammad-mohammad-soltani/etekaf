@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+    --font-sans: 'vazirmatn';
+    --color-primary : #8D2D44;
+    --color-seccondary : #19345F;
+    --color-bg : white;
+}
