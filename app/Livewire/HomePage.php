@@ -65,6 +65,6 @@ class HomePage extends Component
     public function reform(){
         $this -> reset('from_payment');
         $this -> reset('user_data');
-        $this -> reset('current_level');
+        $this -> current_level = 4;
     }
 }
