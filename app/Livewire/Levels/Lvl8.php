@@ -23,5 +23,6 @@ class Lvl8 extends Component
         $this -> validate();
         $this->resid->storeAs(path: 'resid' , name: $this -> national_code);
         $this->resid = null;
+        $this -> dispatch('level_up');
     }
 }
