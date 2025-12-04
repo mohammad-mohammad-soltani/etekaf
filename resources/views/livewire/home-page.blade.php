@@ -14,7 +14,7 @@
         <div class="overflow-auto scrollbar-themed not-md:mask-t-from-95% not-md:mask-t-to-white/20 not-md:mask-b-from-95% not-md:mask-b-to-transparent" >
             <div class="h-fit not-md:pt-[2rem] not-md:pb-[4rem]" >
 {{--                {!!  json_encode($user_data ) !!}--}}
-                {{$end_of_form ? 'true' : 'false'}}
+{{--                {{$end_of_form ? 'true' : 'false'}}--}}
                 @if($current_level == 1)
                     <livewire:levels.lvl1 />
                 @elseif($current_level == 2)
