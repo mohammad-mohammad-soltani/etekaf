@@ -12,7 +12,7 @@ class HomePage extends Component
     #[Session('from_payment')]
     public $from_payment = false;
     #[Session('end_of_form')]
-    public $end_of_form = false;
+    public $end_of_form ;
     public $max_tab = 8;
     public $min_level = 1;
     #[Session('user_phone')]
