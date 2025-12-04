@@ -37,7 +37,6 @@
                 <flux:select
                 wire:model="gender" placeholder="جنسیت را انتخاب کنید">
                     <flux:select.option value="male" key="male" >پسر</flux:select.option>
-                    <flux:select.option value="female" key="female" >دختر</flux:select.option>
                 </flux:select>
                 <flux:error name="gender" />
             </flux:field>

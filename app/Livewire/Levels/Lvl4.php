@@ -13,8 +13,7 @@ class Lvl4 extends Component
     #[Validate('required|integer|between:1388,1393', message:["birth_date.required" => "سال تولد الزامی است", "birth_date.between" => "با توجه به شرایط و قوانین اعتکاف ، تنها ثبت نام نوجوانان متولد شده از 88 تا 93 امکان پذیر است"])]
     public $birth_date;
 
-    #[Validate('required|in:male', message:["gender.required" => "انتخاب جنسیت پسر الزامی است", "gender.in" => "این اعتکاف مخصوص پسران است و امکان ثبت نام دختران وجود ندارد"])]
-    public $gender;
+    public $gender = 'male';
 
     #[Validate('required|digits:10|regex:/^[0-9]{10}$/', message:["national_code.required" => "کد ملی الزامی است", "national_code.digits" => "کد ملی باید 10 رقم باشد", "national_code.regex" => "کد ملی فقط باید شامل اعداد باشد"])]
     public $national_code;
