@@ -24,6 +24,7 @@
                 <flux:description>فقط از سال 88 تا سال 93</flux:description>
                 <flux:input
                     wire:model="birth_date"
+                    type="number"
                     class:input="text-center focus:outline-none hover:shadow-lg focus:shadow-lg focus:shadow-seccondary/20 hover:shadow-seccondary/20  transition-shadow duration-200"
                     placeholder="مثال: 1388"
                 />
