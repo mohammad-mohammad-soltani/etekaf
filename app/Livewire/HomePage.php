@@ -11,6 +11,8 @@ class HomePage extends Component
     public $current_level = 1;
     #[Session('from_payment')]
     public $from_payment = false;
+    #[Session('end_of_form')]
+    public $end_of_form = false;
     public $max_tab = 8;
     public $min_level = 1;
     #[Session('user_phone')]
@@ -36,7 +38,9 @@ class HomePage extends Component
 
     public function mount()
     {
-        if($this -> from_payment && $this -> current_level < 9){
+        if($this -> end_of_form){
+            $this -> current_level = 9;
+        }else if($this -> from_payment && $this -> current_level < 9){
             $this -> current_level = 8;
         }else if($this -> user_phone !== null && $this -> current_level < 4){
             $this->current_level = 4;
@@ -58,7 +62,10 @@ class HomePage extends Component
         }
         if($this -> current_level == 8 ){
             $this -> from_payment = true;
+        }if($this -> current_level == 9){
+            $this -> end_of_form = true;
         }
+
 
     }
     #[On('reform')]
@@ -66,5 +73,6 @@ class HomePage extends Component
         $this -> reset('from_payment');
         $this -> reset('user_data');
         $this -> current_level = 4;
+        $this -> end_of_form = false;
     }
 }

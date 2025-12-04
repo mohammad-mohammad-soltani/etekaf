@@ -5,7 +5,7 @@
             <p class="text-center" >در این مرحله شما باید مبلغ <strong>350 هزار تومان </strong> را به شماره کارت زیر واریز نمایید و سپس رسید آن را در همین صفحه ارسال نمایید.</p>
             <p>در صورت انجام ندادن این مرحله ثبت نام شما انجام نمیشود.</p>
         </div>
-        <div class="card gap-4 text-white dark:bg-white/5 bg-seccondary border-1 dark:border-white/40 border-black/40  w-[70%] rounded-2xl flex flex-col justify-between p-2" >
+        <div class="card gap-4 text-white dark:bg-white/5 bg-seccondary border-1 dark:border-white/40 border-black/40  lg:w-[70%] rounded-2xl flex flex-col justify-between p-2" >
 
             <div class="pt-4 text-white flex gap-2 tracking-widest text-xl w-full justify-around pl-4 pr-4 flex-row-reverse" ><span>6219</span><span>8619</span><span>7446</span><span>0056</span></div>
             <div class="flex justify-between pl-4 pr-4 " >
@@ -14,7 +14,7 @@
             </div>
         </div>
         <input wire:model="resid"  type="file" name="" class="hidden" id="resid">
-        <label class="text-black dark:text-white dark:bg-white/5  border-2 border-seccondary rounded-2xl border-dashed dark:border-white/40 border-black/40  w-[70%] p-3 flex flex-col justify-center items-center"  for="resid">
+        <label class="text-black dark:text-white dark:bg-white/5  border-2 border-seccondary rounded-2xl border-dashed dark:border-white/40 border-black/40  lg:w-[70%] p-3 flex flex-col justify-center items-center"  for="resid">
 
             @if($resid && !$errors -> has('resid'))
                 <div class="flex">
