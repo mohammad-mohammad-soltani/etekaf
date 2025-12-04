@@ -20,12 +20,12 @@
 
 
             <flux:field>
-                <flux:label class="text-sm font-medium flex gap-2"> <span>تاریخ تولد</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
+                <flux:label class="text-sm font-medium flex gap-2"> <span>سال تولد</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
                 <flux:description>فقط از سال 88 تا سال 93</flux:description>
                 <flux:input
                     wire:model="birth_date"
                     class:input="text-center focus:outline-none hover:shadow-lg focus:shadow-lg focus:shadow-seccondary/20 hover:shadow-seccondary/20  transition-shadow duration-200"
-                    placeholder="مثال: 1385/05/23"
+                    placeholder="مثال: 1388"
                 />
                 <flux:error name="birth_date" />
             </flux:field>
