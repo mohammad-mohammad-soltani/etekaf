@@ -22,6 +22,6 @@ class Lvl8 extends Component
     public function next_step(){
         $this -> validate();
         $this->resid->storeAs(path: 'resid' , name: $this -> national_code);
-        $this -> next_step();
+        $this -> dispatch('level_up');
     }
 }
