@@ -5,9 +5,48 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 @custom-variant dark (&:where(.dark, .dark *));
+/*@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));*/
 @theme {
     --font-sans: 'vazirmatn';
     --color-primary : #8D2D44;
     --color-seccondary : #19345F;
     --color-bg : white;
+    --color-accent: var(--color-seccondary);
+    --color-accent-content: var(--color-red-600);
+    --color-accent-foreground: var(--color-white);
+}
+
+.map *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    font-size: 12px;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Themed persistent scrollbar - always visible */
+.scrollbar-themed {
+    scrollbar-color: #8D2D44 #f0f0f0 !important;
+    scrollbar-width: thick !important;
+}
+
+.scrollbar-themed::-webkit-scrollbar {
+    width: 16px !important;
+}
+
+.scrollbar-themed::-webkit-scrollbar-track {
+    background: #f0f0f0 !important;
+    border-radius: 8px;
+}
+
+.scrollbar-themed::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #8D2D44 0%, #19345F 100%) !important;
+    border-radius: 8px;
+    min-height: 40px;
+}
+
+.scrollbar-themed::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #6a2235 0%, #122547 100%) !important;
 }

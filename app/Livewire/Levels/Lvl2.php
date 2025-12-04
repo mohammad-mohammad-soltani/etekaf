@@ -2,6 +2,9 @@
 
 namespace App\Livewire\Levels;
 
+
+use App\Services\OtpSaver;
+use App\Services\SMS;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -15,6 +18,15 @@ class Lvl2 extends Component
     }
     public function next_step(){
         $this -> validate();
-        $this -> dispatch('level_up');
+        if(OtpSaver::exist($this->phone)){
+            $this->dispatch('level_up');
+        }else{
+            $otp = '123456';
+//         SMS::SendOTP($this -> phone , $otp);
+            OtpSaver::save($this -> phone , $otp);
+            session()->put('phone', $this -> phone);
+            $this -> dispatch('level_up');
+        }
+
     }
 }
