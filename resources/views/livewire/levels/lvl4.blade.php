@@ -22,12 +22,16 @@
             <flux:field>
                 <flux:label class="text-sm font-medium flex gap-2"> <span>سال تولد</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
                 <flux:description>فقط از سال 88 تا سال 93</flux:description>
-                <flux:input
-                    wire:model="birth_date"
-                    type="number"
-                    class:input="text-center focus:outline-none hover:shadow-lg focus:shadow-lg focus:shadow-seccondary/20 hover:shadow-seccondary/20  transition-shadow duration-200"
-                    placeholder="مثال: 1388"
-                />
+                <flux:select
+                    wire:model="birth_date" placeholder="سال تولد خود را انتخاب کنید">
+                    <flux:select.option value="null" key="null" >سال تولد خود را انتخاب کنید</flux:select.option>
+                    <flux:select.option value="1388" key="1388" >سال 1388</flux:select.option>
+                    <flux:select.option value="1389" key="1389" >سال 1389</flux:select.option>
+                    <flux:select.option value="1390" key="1390" >سال 1390</flux:select.option>
+                    <flux:select.option value="1391" key="1391" >سال 1391</flux:select.option>
+                    <flux:select.option value="1392" key="1392" >سال 1392</flux:select.option>
+                    <flux:select.option value="1393" key="1393" >سال 1393</flux:select.option>
+                </flux:select>
                 <flux:error name="birth_date" />
             </flux:field>
 

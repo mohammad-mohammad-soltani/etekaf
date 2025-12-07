@@ -1,6 +1,9 @@
 <div class="flex flex-col justify-between items-center gap-3 lg:pr-5 lg:pl-5 h-full lg:pb-15 duration-300" wire:target="next_step" wire:loading.class="opacity-[20%]" >
-    <div class="flex flex-col justify-center items-center "  >
-        <p style="text-align : center;" class="bold text-xl bg-seccondary w-fit text-white p-2">به ثبت نام بزرگترین اعتکاف نوجوانان محور مقاومت خوش آمدید   </p>
+    <div class="flex flex-col justify-center items-center gap-2 "  >
+
+        <div style="text-align : center;" class="bold text-xl bg-seccondary text-white p-2 w-1/2 flex justify-center items-center flex-col rounded-3xl">
+            <img class="mix-blend-screen w-[80%]" src="{{asset('assets/images/typo.jpeg')}}">
+        </div>
         <p>پیش از ثبت نام موارد زیر را مطالعه و تایید کنید</p>
         <p class="" >شرایط و ضوابط الزامی: <br>
             _ فقط ویژه پسران متولد 88 تا 93<br>

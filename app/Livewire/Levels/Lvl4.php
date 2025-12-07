@@ -10,8 +10,8 @@ class Lvl4 extends Component
     #[Validate('required|string|max:100', message:["full_name.required" => "نام و نام خانوادگی الزامی است", "full_name.max" => "نام نباید بیشتر از 100 کاراکتر باشد"])]
     public $full_name;
 
-    #[Validate('required|integer|between:1388,1393', message:["birth_date.required" => "سال تولد الزامی است", "birth_date.between" => "با توجه به شرایط و قوانین اعتکاف ، تنها ثبت نام نوجوانان متولد شده از 88 تا 93 امکان پذیر است"])]
-    public $birth_date;
+    #[Validate('required|string|in:1388,1389,1390,1391,1392,1393', message:["birth_date.required" => "سال تولد الزامی است", "birth_date.between" => "با توجه به شرایط و قوانین اعتکاف ، تنها ثبت نام نوجوانان متولد شده از 88 تا 93 امکان پذیر است"])]
+    public $birth_date ;
 
     public $gender = 'male';
 

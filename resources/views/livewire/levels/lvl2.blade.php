@@ -1,5 +1,5 @@
 <div class="w-full h-full flex justify-center items-center flex-col " >
-    <div class="lg:w-1/2 w-2/3 flex flex-col gap-5 justify-center items-center" >
+    <div class="h-full lg:w-1/2 w-2/3 flex flex-col gap-5 justify-center items-center" >
         <h2 class="font-bold text-xl" >تایید شماره تلفن</h2>
         <flux:input.group class="flex flex-col" >
             <div class="flex" >
