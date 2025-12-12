@@ -2,6 +2,7 @@
     <div class="w-full flex-col" >
         <h2 class="text-center font-black text-2xl" >انتخاب محل اسکان</h2>
         <p class="text-center" >محلی که در اینجا انتخاب میکنید محل اسکان شما داخل خیمه بزرگترین اعتکاف دانش آموزی خواهد بود</p>
+        <p class="text-center" >برای انتخاب نام محور روی آن کلیک کنید . فقط مکان های سبز رنگ قابل انتخاب هستند</p>
 
     </div>
     <div class="w-full" >
@@ -24,7 +25,7 @@
             </label>
             <input wire:model="location" value="mughniyeh" type="radio" name="select_map" id="emad" class="hidden peer/emad" style="display: none !important;">
             <label for="emad" class="peer-checked/emad:bg-yellow-300 duration-200 peer-checked/emad:text-black dark:bg-green-400/40 dark:text-white bg-green-800  col-start-3 row-start-1 row-end-2" >
-                <span>محمور شهید عماد مغنیه</span>
+                <span>محور شهید عماد مغنیه</span>
             </label>
             <div class="dark:bg-yellow-300/50 bg-yellow-300/70 col-start-3 row-start-2 row-end-5 text-black dark:text-white" >
                 <span>محفل ذکر و شکر</span>
@@ -39,7 +40,7 @@
             </label>
             <input wire:model="location" value="yamen" type="radio" name="select_map" id="yamen" class="hidden peer/yamen" style="display: none !important;">
             <label for="yamen" class="peer-checked/yamen:bg-yellow-300 duration-200 peer-checked/yamen:text-black dark:bg-green-400/40 dark:text-white bg-green-800   col-start-1 row-start-4 row-end-5" >
-                <span>محور شهید یمن</span>
+                <span>محور شهید عبدالکریم الغماری</span>
             </label>
             <div class="dark:bg-yellow-300/50 bg-yellow-300/70 col-start-3 row-start-5 row-end-7 text-black dark:text-white" >
                 <span>ذخیره محفل ذکر و شکر</span>
@@ -70,8 +71,61 @@
         <flux:callout variant="danger" icon="x-circle" heading="{{$message}}" />
         @enderror
     </div>
-    <div class="w-[50%]" >
-        <flux:button variant="primary" class="w-full"  wire:click="next_step" ><span class="text-lg">مرحله بعد</span></flux:button>
+
+    <div class="w-[50%]  " wire:dirty  >
+        <div class="flex gap-2" >
+            <p class="w-fit">محور انتخاب شده :</p>
+
+            <div class="flex w-fit">
+    <span wire:show="location == 'nasrallah'" wire:cloak>
+        نصر الله
+    </span>
+
+                <span wire:show="location == 'soleimani'" wire:cloak>
+        قاسم سلیمانی
+    </span>
+
+                <span wire:show="location == 'muhandis'" wire:cloak>
+        ابومهدی المهندس
+    </span>
+
+                <span wire:show="location == 'kuntar'" wire:cloak>
+        سمیر قنطار
+    </span>
+
+                <span wire:show="location == 'yamen'" wire:cloak>
+        عبدالکریم الغماری
+    </span>
+
+                <span wire:show="location == 'sinwar'" wire:cloak>
+        یحیی السنوار
+    </span>
+
+                <span wire:show="location == 'deif'" wire:cloak>
+        محمد الضیف
+    </span>
+
+                <span wire:show="location == 'mughniyeh'" wire:cloak>
+        عماد مغنیه
+    </span>
+
+                <span wire:show="location == 'safieddine'" wire:cloak>
+        هاشم صفی الدین
+    </span>
+
+                <span wire:show="location == 'haniyeh'" wire:cloak>
+        اسمائیل هنیه
+    </span>
+
+                <!-- اگر هیچ مورد انتخاب نشده -->
+                <span wire:show="!location" wire:cloak>
+        هیچ محوری انتخاب نشده
+    </span>
+            </div>
+        </div>
+
+
+        <flux:button variant="primary"  class="w-full"  wire:click="next_step" ><span class="text-lg">مرحله بعد</span></flux:button>
 
     </div>
 </div>

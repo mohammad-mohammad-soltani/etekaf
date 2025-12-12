@@ -25,10 +25,9 @@
                 <flux:description>استان محل سکونت</flux:description>
                 <flux:select
                 wire:model="province" placeholder="استان را انتخاب کنید">
-                    @foreach ($provinces as $id => $province)
-                        <flux:select.option value="{{ $id }}">{{ $province }}</flux:select.option>
+                    <flux:select.option value="isfahan" >اصفهان</flux:select.option>
+                    <flux:select.option value="outher">غیر از اصفهان</flux:select.option>
 
-                    @endforeach
                 </flux:select>
                 <flux:error name="gender" />
                 <flux:error name="province" />
