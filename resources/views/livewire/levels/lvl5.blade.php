@@ -26,7 +26,7 @@
                 <flux:select
                 wire:model="province" placeholder="استان را انتخاب کنید">
                     <flux:select.option value="isfahan" >اصفهان</flux:select.option>
-                    <flux:select.option value="outher">غیر از اصفهان</flux:select.option>
+                    <flux:select.option value="other">غیر از اصفهان</flux:select.option>
 
                 </flux:select>
                 <flux:error name="gender" />

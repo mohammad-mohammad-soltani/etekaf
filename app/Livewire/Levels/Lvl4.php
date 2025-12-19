@@ -15,7 +15,7 @@ class Lvl4 extends Component
 
     public $gender = 'male';
 
-    #[Validate('required|digits:10|regex:/^[0-9]{10}$/', message:["national_code.required" => "کد ملی الزامی است", "national_code.digits" => "کد ملی باید 10 رقم باشد", "national_code.regex" => "کد ملی فقط باید شامل اعداد باشد"])]
+    #[Validate('required|digits:10|regex:/^[0-9]{10}$/|unique:etekaf_users,national_code', message:["national_code.required" => "کد ملی الزامی است", "national_code.digits" => "کد ملی باید 10 رقم باشد", "national_code.regex" => "کد ملی فقط باید شامل اعداد باشد" , 'national_code.unique' => 'فرد دیگری با این کد ملی ثبت نام شده است.' ])]
     public $national_code;
 
     public function render()

@@ -29,11 +29,14 @@
                     <livewire:levels.lvl6 />
                 @elseif($current_level == 7)
                     <livewire:levels.lvl7 />
-                @elseif($current_level == 8)
-                    <livewire:levels.lvl8 :national_code="$user_data['national_code']" />
-                @elseif($current_level == 9)
+               @elseif($current_level == 9)
                     <livewire:levels.lvl9 :user_data="$user_data" />
+                @elseif($current_level == 10)
+                    <livewire:levels.lvl10 />
                 @endif
+{{--                <pre dir="ltr" >--}}
+{{--                    {{json_encode($user_data , JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)}}--}}
+{{--                </pre>--}}
             </div>
         </div>
         <div class=" w-full flex justify-center ">
