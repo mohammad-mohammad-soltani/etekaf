@@ -13,7 +13,7 @@ class DeleteExpiredRequests extends Command
 
     public function handle()
     {
-        $threshold = Carbon::now()->subMinutes(1);
+        $threshold = Carbon::now()->subMinutes(30);
 
         $deleted = EtekafUsers::where('payment_status', 'pending')
             ->where('created_at', '<', $threshold)
