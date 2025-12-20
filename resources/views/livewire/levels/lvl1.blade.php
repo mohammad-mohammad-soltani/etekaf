@@ -10,7 +10,7 @@
             <div class="flex flex-col gap-1 pr-3" >
                 <div class="flex gap-1">
                     <span>-</span>
-                    <p>این اعتکاف ویژه پسران متولد هزار و سیصد و هشتاد و نه تا هزار و سیصد و نود و سه می‌باشد</p>
+                    <p>این اعتکاف ویژه پسران متولد 1389  تا 1393 می‌باشد</p>
                 </div>
                 <div class="flex gap-1">
                     <span>-</span>
