@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
     @livewireStyles
 </head>
-<body class="w-full h-screen flex justify-center items-center gap-4" dir="rtl">
+<body class="w-full h-screen flex justify-center items-center gap-4 bg-orange-100" dir="rtl">
 {{$slot}}
     @livewireScripts
     @fluxAppearance()
