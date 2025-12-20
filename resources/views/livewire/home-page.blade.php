@@ -11,7 +11,7 @@
 {{--                    <span>مرحله</span><span wire:text="current_level" ></span><span>از</span><span x-text="max_tab" ></span>--}}
 {{--                </div>--}}
 {{--            </div>--}}
-            <div style="text-align : center;" class="bold text-xl bg-seccondary text-white p-2 w-1/2 flex justify-center items-center flex-col rounded-3xl">
+            <div style="text-align : center;" class="bold text-xl bg-seccondary text-white p-2 md:w-1/2 w-2/3 flex justify-center items-center flex-col rounded-3xl">
                 <img class="mix-blend-screen w-[80%]" src="{{asset('assets/images/typo.jpeg')}}">
             </div>
         </div>
