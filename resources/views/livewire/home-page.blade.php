@@ -13,6 +13,7 @@
 {{--            </div>--}}
             <div style="text-align : center;" class="bold text-xl bg-seccondary text-white p-2 md:w-1/2 w-2/3 flex justify-center items-center flex-col rounded-3xl">
                 <img class="mix-blend-screen w-[80%]" src="{{asset('assets/images/typo.jpeg')}}">
+                <span class="text-sm" >مسجدسید اصفهان</span>
             </div>
         </div>
         <div class="overflow-auto scrollbar-themed not-md:mask-t-from-95% not-md:mask-t-to-white/20 not-md:mask-b-from-95% not-md:mask-b-to-transparent" >
