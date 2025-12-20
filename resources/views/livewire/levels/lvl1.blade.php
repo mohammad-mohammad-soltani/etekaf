@@ -51,7 +51,7 @@
     </div>
     <div class="w-full gap-2 flex flex-col" >
         <div class="flex w-full" >
-            <flux:field variant="inline">
+            <flux:field variant="inline"  >
                 <flux:checkbox wire:model="terms" />
 
                 <flux:label  ><div class="flex gap-2 items-center " ><p> ضوابط مذکور را خواندم و موافقت خود را با تمامی آنها اعلام میکنم</p><flux:badge color="red">ضروری</flux:badge></div></flux:label>
