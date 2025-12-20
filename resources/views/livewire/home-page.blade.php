@@ -3,12 +3,16 @@
     </div>
     <div class="grid grid-rows-[1fr_9fr_1fr] relative w-full lg:w-6/10 p-3" >
         <div class="flex items-center flex-col" >
-            <h1 class="h-fit text-xl font-black" >ثبت نام بزرگترین اعتکاف دانش اموزی</h1>
-            <div class="flex gap-3">
-                <span class="text-bold " >مسجد سید اصفهان</span>
+{{--            <h1 class="h-fit text-xl font-black" >ثبت‌نام بزرگترین اعتکاف دانش‌آموزی</h1>--}}
+{{--            <div class="flex gap-3">--}}
+{{--                <span class="text-bold " >مسجد‌سید اصفهان</span>--}}
+{{--                <span class="text-bold " >نوجوانان عاشق مبارزه با صهیون ملعون و آمریکای جنایتکار</span>--}}
 {{--                <div class="flex gap-1" >--}}
 {{--                    <span>مرحله</span><span wire:text="current_level" ></span><span>از</span><span x-text="max_tab" ></span>--}}
 {{--                </div>--}}
+{{--            </div>--}}
+            <div style="text-align : center;" class="bold text-xl bg-seccondary text-white p-2 w-1/2 flex justify-center items-center flex-col rounded-3xl">
+                <img class="mix-blend-screen w-[80%]" src="{{asset('assets/images/typo.jpeg')}}">
             </div>
         </div>
         <div class="overflow-auto scrollbar-themed not-md:mask-t-from-95% not-md:mask-t-to-white/20 not-md:mask-b-from-95% not-md:mask-b-to-transparent" >
