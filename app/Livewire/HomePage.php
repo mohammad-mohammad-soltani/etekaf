@@ -124,9 +124,9 @@ class HomePage extends Component
     public function make_user()
     {
         if ($this->user_data['quran_state']) {
-            $amount = 300000;
+            $amount = 10000;
         } else {
-            $amount = 350000;
+            $amount = 20000;
         }
         $payment_id = Pay::start_payment($amount);
         if ($payment_id) {

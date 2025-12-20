@@ -8,6 +8,12 @@ Route::get('/form', \App\Livewire\HomePage::class) -> name('form');
 Route::get('/' , function () {
    return view('welcom');
 });
+Route::middleware('auth:web')->group(function () {
+    Route::prefix('monitor')->group(function () {
+        Route::get('/' , \App\Livewire\Admins\Dashboard::class) -> name('admin.dashboard'); ;
+    });
+});
+Route::get('monitor/login' , \App\Livewire\Admins\Login::class) -> name('login');
 
 Route::get('/private-file/{path}', function ($path) {
     $disk = Storage::disk('local');

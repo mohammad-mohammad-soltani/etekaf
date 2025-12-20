@@ -8,7 +8,7 @@ class Pay
 {
     public static function start_payment($amount){
         $response = Http::post('https://gateway.zibal.ir/v1/request' , [
-            'merchant' =>  'zibal',
+            'merchant' =>  '69426c03666ab9001e080eb0',
             'amount' => $amount,
             'callbackUrl' => route('payment.callback'),
         ]);
@@ -20,7 +20,7 @@ class Pay
     }
     public static function verify($trackId){
         $response = Http::post('https://gateway.zibal.ir/v1/verify' , [
-            'merchant' =>  'zibal',
+            'merchant' =>  '69426c03666ab9001e080eb0',
             'trackId' => $trackId,
         ]);
         return $response -> json()['result'] == 100 ||  $response -> json()['result'] == 200;
