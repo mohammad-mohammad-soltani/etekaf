@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Lvl1 extends Component
 {
-    #[Validate('accepted' , message:'مطالعه قوانین و پذیرفتن آنها الزامی است')]
+    #[Validate('accepted' , message:'برای رفتن به مرحله بعد باید این متن را بپذیرید.برای پذیرفتن روی متن پذیرش ضوابط کلیک کنید')]
     public $terms ;
     public function render()
     {
