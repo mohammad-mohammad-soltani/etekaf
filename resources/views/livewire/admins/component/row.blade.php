@@ -1,4 +1,4 @@
-<tr class="border-b dark:border-white/10 border-black/10">
+<tr class="border-b dark:border-white/10 border-black/10" wire:click="open_user" >
     <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-neutral-secondary-soft">
         {{$user -> name}}
     </th>

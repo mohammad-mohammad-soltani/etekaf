@@ -15,4 +15,7 @@ class Row extends Component
     {
         return view('livewire.admins.component.row');
     }
+    public function open_user(){
+        $this -> dispatch('openModal' , $this -> user->id);
+    }
 }

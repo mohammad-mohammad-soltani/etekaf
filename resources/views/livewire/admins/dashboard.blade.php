@@ -1,33 +1,33 @@
 <div class="w-full h-full flex flex-col items-center pt-4 gap-4" >
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <h1 class="text-3xl font-black" >پنل مانیتور اعتکاف</h1>
-    <div class="w-3/4 gap-2 flex flex-wrap justify-between" >
-        <div class="gap-5 pt-10 pb-10 flex items-center flex-col w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
+    <div class="md:w-3/4 w-full pl-2 pr-2 gap-2 flex flex-wrap justify-between" >
+        <div class="gap-5 pt-10 pb-10 flex items-center flex-col w-full md:w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
             <h2 class="text-2xl font-bold" >مجموع کل افراد ثبت نام شده (پرداخت موفق)</h2>
             <h3 class="text-8xl font-black font-[sans-serif]" >{{$countEtekafUsers}}</h3>
         </div>
-        <div class="gap-5 pt-10 pb-10 flex items-center flex-col w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
+        <div class="gap-5 pt-10 pb-10 flex items-center flex-col w-full md:w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
             <h2 class="text-2xl font-bold" >تعداد افراد در حال پرداخت</h2>
             <h3 class="text-8xl font-black font-[sans-serif]" >{{$countPendingEtekafUsers}}</h3>
         </div>
-        <div class="gap-5 pt-10 pb-10 flex items-center flex-col w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
+        <div class="gap-5 pt-10 pb-10 flex items-center flex-col w-full md:w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
             <h2 class="text-2xl font-bold" >تعداد نوجوانان قرآنی</h2>
             <h3 class="text-8xl font-black font-[sans-serif]" >{{$countQuranEtekafUsers}}</h3>
         </div>
-        <div class="gap-5 pt-10 pb-10 flex items-center flex-col w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
+        <div class="gap-5 pt-10 pb-10 flex items-center flex-col w-full md:w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
             <h2 class="text-2xl font-bold" >تعداد نوجوانان علاقه مند به فعالیت</h2>
             <h3 class="text-8xl font-black font-[sans-serif]" >{{$countWorkerEtekafUsers}}</h3>
         </div>
-        <div wire:ignore class="gap-5 pt-10 pb-10 flex items-center flex-col w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
+        <div wire:ignore class="gap-5 pt-10 pb-10 flex items-center flex-col w-full md:w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
             <h2 class="text-2xl font-bold" >وضعیت فعلی محور ها</h2>
             <canvas id="locations" ></canvas>
         </div>
-        <div wire:ignore class="gap-5 pt-10 pb-10 flex items-center flex-col w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
+        <div wire:ignore class="gap-5 pt-10 pb-10 flex items-center flex-col w-full md:w-[49.5%] rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
             <h2 class="text-2xl font-bold" >گزارش آشنایی</h2>
             <div class="w-2/3"><canvas  id="industry" ></canvas></div>
         </div>
         <div class="gap-5 pt-5 pb-10 flex  flex-col w-full rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
-            <input wire:model.live.debounce.100ms="search_text" placeholder="نام ، کد ملی ، شماره تلفن ، شماره تلفن والدین ، مدرسه" type="text" class="w-1/2 dark:bg-white/10 bg-black/10 p-2 pr-4 text-xl rounded-full focus:outline-none  " >
+            <input wire:model.live.debounce.100ms="search_text" placeholder="نام ، کد ملی ، شماره تلفن ، شماره تلفن والدین ، مدرسه" type="text" class="md:w-1/2 dark:bg-white/10 bg-black/10 p-2 pr-4 text-xl rounded-full focus:outline-none  " >
 
 
             <div class="relative overflow-x-auto bg-neutral-primary shadow-xs rounded-base border-1 rounded-2xl dark:border-white/10 border-black/10">
@@ -83,7 +83,9 @@
         </div>
 
     </div>
-
+    @if($IsShowUserModal)
+        <livewire:modal.user-edite :user="$CurrentUser" ></livewire:modal.user-edite>
+    @endif
     <script>
         const ctx = document.getElementById('locations');
 
