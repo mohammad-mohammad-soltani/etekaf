@@ -5,7 +5,7 @@
                 <h3 class="text-2xl" >طریقه آشنایی</h3>
                 <flux:badge color="green" size="sm" ><span >اختیاری</span></flux:badge>
             </div>
-            <p>از چه طریقی با اعتکاف و مجموعه ابنا الامام آشنا شدید؟</p>
+            <p>از چه طریقی با اعتکاف و مجموعه ابناءالامام آشنا شدید؟</p>
             <flux:field>
                 <flux:select wire:model="referralSource" placeholder="برای انتخاب کلیک کنید...">
                     <flux:select.option value="null" >لطفا یک مورد را انتخاب کنید</flux:select.option>

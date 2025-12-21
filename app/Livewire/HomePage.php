@@ -10,7 +10,7 @@ use Livewire\Component;
 
 class HomePage extends Component
 {
-    public $current_level = 6;
+    public $current_level = 7;
     #[Session('from_payment')]
     public $from_payment = false;
     #[Session('end_of_form')]
