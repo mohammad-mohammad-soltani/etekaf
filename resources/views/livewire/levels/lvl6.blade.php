@@ -1,11 +1,12 @@
 <div class="flex flex-col justify-center items-center gap-2 mt-2" >
+    <h2 class="font-bold" >انتخاب محل اسکان در خیمه مسجد</h2>
     <div class="w-full" >
 
         <div class="overflow-auto h-full flex lg:justify-center gap-2 py-3 mask-l-from-70% " >
             <flux:badge color="zinc">مکان های تکمیل ظرفیت شده</flux:badge>
             <flux:badge color="green">مکان های قابل انتخاب</flux:badge>
             <flux:badge color="blue">مکان های غیر قابل اسکان</flux:badge>
-            <div class="pl-6 pr-6 p-1" >
+            <div class="md:hidden pl-6 pr-6 p-1" >
 
             </div>
         </div>
