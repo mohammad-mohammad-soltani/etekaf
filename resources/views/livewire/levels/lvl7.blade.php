@@ -3,15 +3,14 @@
         <div class="w-full flex flex-col gap-1" >
             <div class="flex gap-2 items-center" >
                 <h3 class="text-2xl" >طریقه آشنایی</h3>
-                <flux:badge color="green" size="sm" ><span >اختیاری</span></flux:badge>
+                <flux:badge color="red" size="sm" ><span >الزامی</span></flux:badge>
             </div>
-            <p>از چه طریقی با اعتکاف و مجموعه ابناءالامام آشنا شدید؟</p>
+            <p>از چه طریقی با این اعتکاف و هیئت ابناءالامام آشنا شدید؟</p>
             <flux:field>
                 <flux:select wire:model="referralSource" placeholder="برای انتخاب کلیک کنید...">
-                    <flux:select.option value="null" >لطفا یک مورد را انتخاب کنید</flux:select.option>
-                    <flux:select.option value="banner" >بنر های سطح شهر</flux:select.option>
-                    <flux:select.option value="friends" >دوست و اطرافیان</flux:select.option>
-                    <flux:select.option value="bus" >پوستر های  داخل اتوبوس</flux:select.option>
+                    <flux:select.option value="banner" >بنرهای سطح شهر</flux:select.option>
+                    <flux:select.option value="friends" >دوستان و اطرافیان</flux:select.option>
+                    <flux:select.option value="bus" >پوسترهای داخل اتوبوس</flux:select.option>
                     <flux:select.option value="social" >فضای مجازی</flux:select.option>
                 </flux:select>
                 <flux:error name="referralSource" />
