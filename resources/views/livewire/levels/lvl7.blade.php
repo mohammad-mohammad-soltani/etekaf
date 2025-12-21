@@ -26,9 +26,9 @@
             <p>چنانچه علاقه مند مسئولیت‌پذیری در اعتکاف هستید یکی از کاگروه های زیر را انتخاب کنید.</p>
             <flux:select wire:model="activityArea" >
                 <flux:select.option value="null" >برای انتخاب کلیک کنید...</flux:select.option>
+                <flux:select.option value="media_group" >رسانه</flux:select.option>
                 <flux:select.option value="security_officer" >انتظامات</flux:select.option>
                 <flux:select.option value="catering_supervisor">سفره</flux:select.option>
-                <flux:select.option value="media_group" >رسانه</flux:select.option>
             </flux:select>
         </div>
         <div class="w-full flex flex-col gap-1" >
