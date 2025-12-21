@@ -33,13 +33,13 @@
         </div>
         <div class="w-full flex flex-col gap-1" >
             <div class="flex gap-2 items-center" >
-                <h3 class="text-2xl" >استعداد قرآنی دارید؟</h3>
+                <h3 class="text-2xl" >تخفیف ویژه اعتکاف</h3>
                 <flux:badge color="green" size="sm" ><span >اختیاری</span></flux:badge>
             </div>
-            <p>اگر حافظ بیش از پنج جزء قرآن کریم هستید 50 هزار تومان تخفیف ویژه دریافت میکنید</p>
+            <p>اگر حافظ بیش از پنج جزء قرآن کریم یا فرزند شهید هستید 50 هزار تومان تخفیف ویژه دریافت میکنید.</p>
             <flux:select wire:model="quranState" placeholder="برای انتخاب کلیک کنید...">
-                <flux:select.option value="false" >نیستم</flux:select.option>
-                <flux:select.option value="true" >هستم</flux:select.option>
+                <flux:select.option value="false" >برای انتخاب کلیک کنید...</flux:select.option>
+                <flux:select.option value="true" >حافظ قرآن کریم یا فرزند شهید هستم</flux:select.option>
             </flux:select>
         </div>
         <flux:button
