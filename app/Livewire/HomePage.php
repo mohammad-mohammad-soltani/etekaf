@@ -10,7 +10,7 @@ use Livewire\Component;
 
 class HomePage extends Component
 {
-    public $current_level = 7;
+    public $current_level = 1;
     #[Session('from_payment')]
     public $from_payment = false;
     #[Session('end_of_form')]
@@ -124,9 +124,9 @@ class HomePage extends Component
     public function make_user()
     {
         if ($this->user_data['quran_state']) {
-            $amount = 10000;
+            $amount = 3000000;
         } else {
-            $amount = 20000;
+            $amount = 3500000;
         }
         $payment_id = Pay::start_payment($amount);
         if ($payment_id) {
