@@ -4,10 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
 
-Route::get('/form', \App\Livewire\HomePage::class) -> name('form');
-Route::get('/' , function () {
-   return view('welcom');
-});
+Route::get('/', \App\Livewire\HomePage::class) -> name('form');
+//Route::get('/' , function () {
+//   return view('welcom');
+//});
 Route::middleware('auth:web')->group(function () {
     Route::prefix('monitor')->group(function () {
         Route::get('/' , \App\Livewire\Admins\Dashboard::class) -> name('admin.dashboard'); ;
