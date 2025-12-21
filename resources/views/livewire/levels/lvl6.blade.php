@@ -72,7 +72,7 @@
 
             <input {{\App\Services\Capacity::have_capacity('nasrallah') > 0 ? '' : 'disabled'}} value="nasrallah" wire:model="location" type="radio" name="select_map" id="nasr_allah" class="hidden peer/nasr_allah" style="display: none !important;">
             <label for="nasr_allah" class="{{\App\Services\Capacity::have_capacity('nasrallah') > 0 ? 'dark:bg-green-400/40 bg-green-200 text-green-800 font-bold' : 'dark:bg-zinc-600 bg-zinc-200 not-dark:text-zinc-800 pointer-events-none'}} peer-checked/nasr_allah:bg-green-500 duration-200 peer-checked/nasr_allah:text-black dark:text-white col-start-2 row-start-3 row-end-4 ml-1 mr-1">
-                <span>محور شهید سید حسن نصر الله</span>
+                <span>محور شهید سید حسن نصرالله</span>
             </label>
         </div>
     </div>
@@ -88,7 +88,7 @@
 
             <div class="flex w-fit">
             <span wire:show="location == 'nasrallah'" wire:cloak>
-                نصر الله
+                سید حسن نصرالله
             </span>
 
                 <span wire:show="location == 'soleimani'" wire:cloak>
