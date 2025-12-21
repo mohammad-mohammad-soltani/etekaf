@@ -7,13 +7,13 @@ use Livewire\Component;
 
 class Lvl5 extends Component
 {
-    #[Validate('required|regex:/^9\d{9}$/', message:["mobile_number.required" => "شماره همراه الزامی است", "mobile_number.regex" => "شماره همراه نامعتبر است"])]
+    #[Validate('required|regex:/^09\d{9}$/', message:["mobile_number.required" => "شماره همراه الزامی است", "mobile_number.regex" => "لطفا شماره تلفن را با فرمت09xxxxxxxxx وارد کنید"])]
     public $mobile_number;
 
     #[Validate('required|in:isfahan,outher', message:["province.required" => "انتخاب استان الزامی است", "province.in" => "استان نامعتبر است"])]
     public $province = 'isfahan';
 
-    #[Validate('required|regex:/^9\d{9}$/', message:["parent_mobile.required" => "شماره همراه والدین الزامی است", "parent_mobile.regex" => "شماره همراه والدین نامعتبر است"])]
+    #[Validate('required|regex:/^09\d{9}$/', message:["parent_mobile.required" => "شماره همراه والدین الزامی است", "parent_mobile.regex" => "لطفا شماره تلفن را با فرمت09xxxxxxxxx وارد کنید"])]
     public $parent_mobile;
 
     #[Validate('required|string|max:150', message:["school_name.required" => "نام مدرسه الزامی است", "school_name.max" => "نام مدرسه نباید بیشتر از 150 کاراکتر باشد"])]

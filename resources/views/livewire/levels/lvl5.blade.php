@@ -1,6 +1,6 @@
 <div class="w-full h-full flex justify-center items-center flex-col">
     <div class="lg:w-2/3 w-5/6 flex flex-col gap-8 justify-center items-center">
-        <h2 class="font-bold text-2xl text-center">اطلاعات تماس و محل سکونت</h2>
+        <h2 class="font-bold text-2xl text-center">شماره تماس و محل سکونت</h2>
 
         <!-- 2 Column 2 Row Grid -->
         <div class="w-full grid md:grid-cols-2 gap-6 items-end">
@@ -12,7 +12,7 @@
                     wire:model="mobile_number"
                     class="text-right focus:outline-none "
                     class:input="text-left focus:outline-none hover:shadow-lg focus:shadow-lg focus:shadow-seccondary/20 hover:shadow-seccondary/20  transition-shadow duration-200"
-                    placeholder="9XXXXXXXXX"
+                    placeholder="09XXXXXXXXX"
                     type="tel"
                     inputmode="numeric"
                 />
@@ -39,7 +39,7 @@
                 <flux:input
                     wire:model="parent_mobile"
                     class="text-right focus:outline-none "
-                    placeholder="9XXXXXXXXX"
+                    placeholder="09XXXXXXXXX"
                     type="tel"
                     inputmode="numeric"
                     class:input="text-left focus:outline-none hover:shadow-lg focus:shadow-lg focus:shadow-seccondary/20 hover:shadow-seccondary/20  transition-shadow duration-200"
