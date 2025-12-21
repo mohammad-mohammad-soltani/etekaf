@@ -8,7 +8,7 @@ use Livewire\Component;
 class Lvl7 extends Component
 {
     #[Validate('in:banner,friends,bus,social' , message:['referralSource.in' => 'لطفا طریقه آشنایی خود را وارد کنید'])]
-    public $referralSource = 'banner';
+    public $referralSource = 'null';
     public $quranState = false;
     public $activityArea;
     public function render()

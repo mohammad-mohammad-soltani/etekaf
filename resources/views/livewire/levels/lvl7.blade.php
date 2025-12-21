@@ -7,7 +7,7 @@
             </div>
             <p>از چه طریقی با این اعتکاف و هیئت ابناءالامام آشنا شدید؟</p>
             <flux:field>
-                <flux:select wire:model="referralSource">
+                <flux:select wire:model="referralSource" >
                     <flux:select.option value="null" >برای انتخاب کلیک کنید...</flux:select.option>
                     <flux:select.option value="banner" >بنرهای سطح شهر</flux:select.option>
                     <flux:select.option value="friends" >دوستان و اطرافیان</flux:select.option>
