@@ -37,9 +37,9 @@
                 <flux:badge color="green" size="sm" ><span >اختیاری</span></flux:badge>
             </div>
             <p>اگر حافظ بیش از پنج جزء قرآن کریم یا فرزند شهید هستید 50 هزار تومان تخفیف ویژه دریافت میکنید.</p>
-            <flux:select wire:model="quranState" placeholder="برای انتخاب کلیک کنید...">
-                <flux:select.option value="false" >برای انتخاب کلیک کنید...</flux:select.option>
-                <flux:select.option value="true" >حافظ قرآن کریم یا فرزند شهید هستم</flux:select.option>
+            <flux:select wire:model="quranState" >
+                <flux:select.option value="false" >حافظ بیش از پنج جزء از قرآن کریم یا فرزند شهید نیستم</flux:select.option>
+                <flux:select.option value="true" >حافظ بیش از پنج جزء از  قرآن کریم یا فرزند شهید هستم</flux:select.option>
             </flux:select>
         </div>
         <flux:button
