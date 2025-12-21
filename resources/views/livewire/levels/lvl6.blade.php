@@ -4,7 +4,7 @@
         <div class="overflow-auto h-full flex lg:justify-center gap-2 py-3 mask-l-from-70% " >
             <flux:badge color="zinc">مکان های تکمیل ظرفیت شده</flux:badge>
             <flux:badge color="green">مکان های قابل انتخاب</flux:badge>
-            <flux:badge color="yellow">مکان های غیر قابل اسکان</flux:badge>
+            <flux:badge color="blue">مکان های غیر قابل اسکان</flux:badge>
             <div class="pl-6 pr-6 p-1" >
 
             </div>
@@ -28,7 +28,7 @@
                 <span>محور شهید عماد مغنیه</span>
             </label>
 
-            <div class="dark:bg-yellow-300/50 bg-yellow-300/70 col-start-3 row-start-2 row-end-5 text-black dark:text-white" >
+            <div class="dark:bg-blue-300/50 bg-blue-300/70 col-start-3 row-start-2 row-end-5 text-black dark:text-white" >
                 <span>محفل ذکر و شکر</span>
             </div>
 
@@ -47,7 +47,7 @@
                 <span>محور شهید عبدالکریم الغماری</span>
             </label>
 
-            <div class="dark:bg-yellow-300/50 bg-yellow-300/70 col-start-3 row-start-5 row-end-7 text-black dark:text-white" >
+            <div class="dark:bg-blue-300/50 bg-blue-300/70 col-start-3 row-start-5 row-end-7 text-black dark:text-white" >
                 <span>ذخیره محفل ذکر و شکر</span>
             </div>
 
@@ -56,7 +56,7 @@
                 <span>محور شهید سمیر قنطار</span>
             </label>
 
-            <div class="dark:bg-yellow-300/50 bg-yellow-300/70 col-start-2 row-start-6 row-end-7  text-black dark:text-white" >
+            <div class="dark:bg-blue-300/50 bg-blue-300/70 col-start-2 row-start-6 row-end-7  text-black dark:text-white" >
                 <span>درب ورودی </span>
             </div>
 
