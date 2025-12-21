@@ -6,7 +6,7 @@
     <div class="bg-orange-700  text-white w-[80%] p-3 rounded-2xl flex flex-col" >
         <h2 class="font-black " >توجه!توجه!</h2>
         <p>معتکف عزیز!</p>
-        <p>برای ادامه فرایند اعتکاف،حتما حتما داخل کانال هیئت ابناءالامام در پیامرسان ایتا عضو شوید</p>
+        <p>برای اطلاع از جزئیات این اعتکاف،حتما حتما داخل کانال هیئت ابناءالامام در پیامرسان ایتا عضو شوید</p>
         <a href="https://eitaa.com/GOFTEMANRAZMIR" class="w-full bg-white p-2 rounded-full text-black text-center font-bold hover:bg-transparent hover:text-white duration-200 "  >عضویت در کانال هیئت ابناء الامام</a>
     </div>
     <p>چنانچه تمایل دارید ثبت‌نام دیگری برای فرد دیگری انجام دهید میتوانید از دکمه زیر استفاده نمایید</p>
