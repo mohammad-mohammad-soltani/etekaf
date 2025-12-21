@@ -1,7 +1,7 @@
-<div class="w-full h-full flex justify-center flex-col items-center gap-2">
+<div class="w-full h-full flex justify-center flex-col items-center gap-2 pt-2">
     <div class="bg-seccondary text-white w-[80%] p-3 rounded-2xl" >
         <h2>{{$user_data['name']}} <span>عزیز !</span> ثبت نام شما با موفقیت انجام شد.</h2>
-        <p>کارت ورود به اعتکاف به شماره شما پیامک خواهد شد . حتما آن را موقع ثبت نام به همراه داشته باشید</p>
+        <p>پیامک تایید ثبت نام به شماره همراه شما پیامک خواهد شد.</p>
     </div>
     <div class="bg-orange-700  text-white w-[80%] p-3 rounded-2xl flex flex-col" >
         <h2 class="font-black " >توجه!توجه!</h2>
