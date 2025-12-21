@@ -1,7 +1,7 @@
 <div class="flex flex-col justify-center items-center gap-2 mt-2" >
     <div class="w-full" >
 
-        <div class="overflow-auto h-full flex lg:justify-center gap-2" >
+        <div class="overflow-auto h-full flex lg:justify-center gap-2 py-3" >
             <flux:badge color="zinc">مکان های تکمیل ظرفیت شده</flux:badge>
             <flux:badge color="green">مکان های قابل انتخاب</flux:badge>
             <flux:badge color="yellow">مکان های غیر قابل اسکان</flux:badge>
