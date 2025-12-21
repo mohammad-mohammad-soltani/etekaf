@@ -81,7 +81,7 @@
         <flux:callout variant="danger" icon="x-circle" heading="{{$message}}" />
         @enderror
     </div>
-    <div class="flex gap-2" >
+    <div class="flex gap-2"  wire:dirty>
         <p class="w-fit">محور انتخابی :</p>
 
         <div class="flex w-fit">
