@@ -29,12 +29,17 @@ class Dictionary
         return $industries[$industry];
     }
     public static function job($job){
+        if ($job === null) {
+            return 'علاقه‌مند نیستم';
+        }
+
         $jobs = [
-            null => 'علاقه مند نیستم',
             'security_officer' => 'انتظامات',
             'catering_supervisor' => 'سفره',
             'media_group' => 'رسانه',
         ];
-        return $jobs[$job];
+
+        return $jobs[$job] ?? '---';
     }
+
 }
