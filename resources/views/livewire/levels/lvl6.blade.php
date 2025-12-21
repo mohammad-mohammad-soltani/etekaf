@@ -124,7 +124,7 @@
             </span>
 
                 <span wire:show="location == 'haniyeh'" wire:cloak>
-                اسمائیل هنیه
+                اسماعیل هنیه
             </span>
 
                 <span wire:show="!location" wire:cloak>
