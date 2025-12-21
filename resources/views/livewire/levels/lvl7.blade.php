@@ -23,9 +23,9 @@
                 <h3 class="text-2xl" >شما هم مسئول اعتکاف باشید</h3>
                 <flux:badge color="green" size="sm" ><span >اختیاری</span></flux:badge>
             </div>
-            <p>چنان چه علاقه به فعالیت در اعتکاف دارید یکی از کارگروه های زیر را انتخاب نمایید.</p>
-            <flux:select wire:model="activityArea" placeholder="برای انتخاب کلیک کنید...">
-                <flux:select.option value="null" >تمایل ندارم</flux:select.option>
+            <p>چنانچه علاقه مند مسئولیت‌پذیری در اعتکاف هستید یکی از کاگروه های زیر را انتخاب کنید.</p>
+            <flux:select wire:model="activityArea" >
+                <flux:select.option value="null" >برای انتخاب کلیک کنید...</flux:select.option>
                 <flux:select.option value="security_officer" >انتظامات</flux:select.option>
                 <flux:select.option value="catering_supervisor">سفره</flux:select.option>
                 <flux:select.option value="media_group" >رسانه</flux:select.option>
