@@ -1,4 +1,4 @@
-<div class="flex flex-col justify-center items-center gap-2" >
+<div class="flex flex-col justify-center items-center gap-2 mt-2" >
     <div class="w-full" >
 
         <div class="overflow-auto h-full flex lg:justify-center gap-2" >
