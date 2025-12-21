@@ -67,7 +67,7 @@
 
             <input {{\App\Services\Capacity::have_capacity('soleimani') > 0 ? '' : 'disabled'}} value="soleimani" wire:model="location" type="radio" name="select_map" id="solaimani" class="hidden peer/solaimani" style="display: none !important;">
             <label for="solaimani" class="{{\App\Services\Capacity::have_capacity('soleimani') > 0 ? 'dark:bg-green-400/40 bg-green-200 text-green-800 font-bold' : 'dark:bg-zinc-600 bg-zinc-200 not-dark:text-zinc-800 pointer-events-none'}} peer-checked/solaimani:bg-green-500 duration-200 peer-checked/solaimani:text-black dark:text-white col-start-2 row-start-2 row-end-3 ">
-                <span>محور شهید قاسم سلیمانی</span>
+                <span>محور شهید حاج قاسم سلیمانی</span>
             </label>
 
             <input {{\App\Services\Capacity::have_capacity('nasrallah') > 0 ? '' : 'disabled'}} value="nasrallah" wire:model="location" type="radio" name="select_map" id="nasr_allah" class="hidden peer/nasr_allah" style="display: none !important;">
@@ -88,43 +88,43 @@
 
             <div class="flex w-fit">
             <span wire:show="location == 'nasrallah'" wire:cloak>
-                سید حسن نصرالله
+                شهید سید حسن نصرالله
             </span>
 
                 <span wire:show="location == 'soleimani'" wire:cloak>
-                قاسم سلیمانی
+                شهید حاج قاسم سلیمانی
             </span>
 
                 <span wire:show="location == 'muhandis'" wire:cloak>
-                ابومهدی المهندس
+                شهید ابومهدی المهندس
             </span>
 
                 <span wire:show="location == 'kuntar'" wire:cloak>
-                سمیر قنطار
+                شهید سمیر قنطار
             </span>
 
                 <span wire:show="location == 'yamen'" wire:cloak>
-                عبدالکریم الغماری
+                شهید عبدالکریم الغماری
             </span>
 
                 <span wire:show="location == 'sinwar'" wire:cloak>
-                یحیی السنوار
+                شهید یحیی السنوار
             </span>
 
                 <span wire:show="location == 'deif'" wire:cloak>
-                محمد الضیف
+                شهید محمد الضیف
             </span>
 
                 <span wire:show="location == 'mughniyeh'" wire:cloak>
-                عماد مغنیه
+                شهید عماد مغنیه
             </span>
 
                 <span wire:show="location == 'safieddine'" wire:cloak>
-                هاشم صفی الدین
+                شهید سید هاشم صفی الدین
             </span>
 
                 <span wire:show="location == 'haniyeh'" wire:cloak>
-                اسماعیل هنیه
+                شهید اسماعیل هنیه
             </span>
 
                 <span wire:show="!location" wire:cloak>
