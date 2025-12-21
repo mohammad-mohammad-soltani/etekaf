@@ -81,53 +81,56 @@
         <flux:callout variant="danger" icon="x-circle" heading="{{$message}}" />
         @enderror
     </div>
-    <div class="flex gap-2"  wire:dirty>
-        <p class="w-fit">محور انتخابی :</p>
+    <div  wire:dirty >
 
-        <div class="flex w-fit">
+        <div class="flex gap-2 " >
+            <p class="w-fit">محور انتخابی :</p>
+
+            <div class="flex w-fit">
             <span wire:show="location == 'nasrallah'" wire:cloak>
                 نصر الله
             </span>
 
-            <span wire:show="location == 'soleimani'" wire:cloak>
+                <span wire:show="location == 'soleimani'" wire:cloak>
                 قاسم سلیمانی
             </span>
 
-            <span wire:show="location == 'muhandis'" wire:cloak>
+                <span wire:show="location == 'muhandis'" wire:cloak>
                 ابومهدی المهندس
             </span>
 
-            <span wire:show="location == 'kuntar'" wire:cloak>
+                <span wire:show="location == 'kuntar'" wire:cloak>
                 سمیر قنطار
             </span>
 
-            <span wire:show="location == 'yamen'" wire:cloak>
+                <span wire:show="location == 'yamen'" wire:cloak>
                 عبدالکریم الغماری
             </span>
 
-            <span wire:show="location == 'sinwar'" wire:cloak>
+                <span wire:show="location == 'sinwar'" wire:cloak>
                 یحیی السنوار
             </span>
 
-            <span wire:show="location == 'deif'" wire:cloak>
+                <span wire:show="location == 'deif'" wire:cloak>
                 محمد الضیف
             </span>
 
-            <span wire:show="location == 'mughniyeh'" wire:cloak>
+                <span wire:show="location == 'mughniyeh'" wire:cloak>
                 عماد مغنیه
             </span>
 
-            <span wire:show="location == 'safieddine'" wire:cloak>
+                <span wire:show="location == 'safieddine'" wire:cloak>
                 هاشم صفی الدین
             </span>
 
-            <span wire:show="location == 'haniyeh'" wire:cloak>
+                <span wire:show="location == 'haniyeh'" wire:cloak>
                 اسماعیل هنیه
             </span>
 
-            <span wire:show="!location" wire:cloak>
+                <span wire:show="!location" wire:cloak>
                 هیچ محوری انتخاب نشده
             </span>
+            </div>
         </div>
     </div>
     <div class="w-[50%]  " wire:dirty  >
