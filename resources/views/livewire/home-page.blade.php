@@ -47,8 +47,7 @@
         <div class=" w-full flex justify-center ">
             <div class="flex items-center" >
                 <div class="bg-seccondary text-white p-2 rounded-xl  " >
-                    <a class="not-lg:block hidden" href="tel://09140275311">پشتیبان سایت : 09140275311</a>
-                    <p class="lg:block hidden" >شماره پشتیبان » 09140275311</p>
+                    <a class="block flex gap-2" href="https://eitaa.com/@alaqsa_X" >پشتیبانی سایت در پیامرسان ایتا » <div dir="ltr" >@alaqsa_X</div></a>
                 </div>
             </div>
         </div>
