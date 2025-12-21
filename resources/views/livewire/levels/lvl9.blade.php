@@ -7,9 +7,9 @@
         <h2 class="font-black " >توجه!توجه!</h2>
         <p>معتکف عزیز!</p>
         <p>برای ادامه فرایند اعتکاف،حتما حتما داخل کانال هیئت ابناءالامام در پیامرسان ایتا عضو شوید</p>
-        <a href="https://eitaa.com/GOFTEMANRAZMIR" class="w-full bg-white p-2 rounded-full text-black text-center font-bold hover:bg-transparent hover:text-white duration-200 "  >عضویت در کانال ایتا هیئت ابناء الامام</a>
+        <a href="https://eitaa.com/GOFTEMANRAZMIR" class="w-full bg-white p-2 rounded-full text-black text-center font-bold hover:bg-transparent hover:text-white duration-200 "  >عضویت در کانال هیئت ابناء الامام</a>
     </div>
-    <p>چنان چه تمایل دارید ثبت نام دیگری برای فرد دیگری انجام دهید میتوانید از دکمه زیر استفاده نمایید</p>
+    <p>چنانچه تمایل دارید ثبت‌نام دیگری برای فرد دیگری انجام دهید میتوانید از دکمه زیر استفاده نمایید</p>
     <flux:button variant="primary" wire:click="reform">ثبت نام مجدد</flux:button>
 
 </div>
