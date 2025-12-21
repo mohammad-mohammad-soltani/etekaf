@@ -1,5 +1,5 @@
-<div class="flex flex-col justify-center items-center gap-2 mt-2" >
-    <h2 class="font-bold" >انتخاب محل اسکان در خیمه مسجد</h2>
+<div class="flex flex-col justify-center items-center gap-2  md:mt-2" >
+    <h2 class="font-bold text-xl" >انتخاب محل اسکان در خیمه مسجد</h2>
     <div class="w-full" >
 
         <div class="overflow-auto h-full flex lg:justify-center gap-2 py-3 mask-l-from-70% " >
