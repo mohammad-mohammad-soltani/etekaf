@@ -27,15 +27,26 @@ class Dashboard extends Component
     {
         return view('livewire.admins.dashboard');
     }
-    public function updatedSearchText($value)
+    public function doSearch()
     {
-        $this->search_result = EtekafUsers::where('name', 'like', "%{$value}%")
-        -> orwhere('national_code', 'like', "%{$value}%")
-        -> orwhere('phone_number', 'like', "%{$value}%")
-        -> orwhere('parent_phone_number', 'like', "%{$value}%")
-        -> orwhere('school', 'like', "%{$value}%")
+        $value = trim($this->search_text);
+
+        if (strlen($value) < 2) {
+            $this->search_result = [];
+            return;
+        }
+
+        $this->search_result = EtekafUsers::where(function ($q) use ($value) {
+            $q->where('name', 'like', "%{$value}%")
+                ->orWhere('national_code', 'like', "%{$value}%")
+                ->orWhere('phone_number', 'like', "%{$value}%")
+                ->orWhere('parent_phone_number', 'like', "%{$value}%")
+                ->orWhere('school', 'like', "%{$value}%");
+        })
+            ->limit(20)
             ->get();
     }
+
     #[On('openModal')]
     public function open_modal($id){
         $this ->  CurrentUser = EtekafUsers::find($id);

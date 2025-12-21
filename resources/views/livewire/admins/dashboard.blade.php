@@ -27,7 +27,22 @@
             <div class="w-2/3"><canvas  id="industry" ></canvas></div>
         </div>
         <div class="gap-5 pt-5 pb-10 flex  flex-col w-full rounded-2xl p-3 border-1 dark:border-white/10 border-black/10" >
-            <input wire:model.live="search_text" placeholder="نام ، کد ملی ، شماره تلفن ، شماره تلفن والدین ، مدرسه" type="text" class="md:w-1/2 dark:bg-white/10 bg-black/10 p-2 pr-4 text-xl rounded-full focus:outline-none  " >
+            <div class="flex gap-2 items-center">
+                <input
+                    wire:model="search_text"
+                    wire:keydown.enter.prevent="doSearch"
+                    placeholder="نام، کد ملی، شماره تلفن، شماره تلفن والدین، مدرسه"
+                    type="text"
+                    class="md:w-1/2 dark:bg-white/10 bg-black/10 p-2 pr-4 text-xl rounded-full focus:outline-none"
+                >
+
+                <button
+                    wire:click="doSearch"
+                    class="px-4 py-2 rounded-full bg-blue-600 text-white text-lg"
+                >
+                    جستجو
+                </button>
+            </div>
 
 
             <div class="relative overflow-x-auto bg-neutral-primary shadow-xs rounded-base border-1 rounded-2xl dark:border-white/10 border-black/10">
