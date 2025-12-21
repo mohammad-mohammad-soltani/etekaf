@@ -15,7 +15,7 @@
 
             <input {{\App\Services\Capacity::have_capacity('haniyeh') > 0 ? '' : 'disabled'}} wire:model="location" type="radio" value="haniyeh" name="select_map" id="esmail" class="hidden peer/esmail" style="display: none !important;">
             <label for="esmail" class="{{\App\Services\Capacity::have_capacity('haniyeh') > 0 ? 'dark:bg-green-400/40 bg-green-200 text-green-800 font-bold ' : 'dark:bg-zinc-600 bg-zinc-200 not-dark:text-zinc-800 pointer-events-none'}} w-full duration-200 peer-checked/esmail:bg-green-500 peer-checked/esmail:text-black dark:text-white col-start-1 row-start-1 row-end-2">
-                <span>محور شهید اسمائیل هنیه</span>
+                <span>محور شهید اسماعیل هنیه</span>
             </label>
 
             <input {{\App\Services\Capacity::have_capacity('safieddine') > 0 ? '' : 'disabled'}} wire:model="location" type="radio" value="safieddine" name="select_map" id="hashem" class="hidden peer/hashem" style="display: none !important;">
