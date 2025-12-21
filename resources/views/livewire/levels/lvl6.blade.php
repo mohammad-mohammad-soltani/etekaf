@@ -1,10 +1,13 @@
 <div class="flex flex-col justify-center items-center gap-2 mt-2" >
     <div class="w-full" >
 
-        <div class="overflow-auto h-full flex lg:justify-center gap-2 py-3" >
+        <div class="overflow-auto h-full flex lg:justify-center gap-2 py-3 mask-l-from-70% " >
             <flux:badge color="zinc">مکان های تکمیل ظرفیت شده</flux:badge>
             <flux:badge color="green">مکان های قابل انتخاب</flux:badge>
             <flux:badge color="yellow">مکان های غیر قابل اسکان</flux:badge>
+            <div class="pl-6 pr-6 p-1" >
+
+            </div>
         </div>
     </div>
     <div class="w-full h-full flex justify-center" >
