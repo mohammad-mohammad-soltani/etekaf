@@ -8,7 +8,7 @@
         <div class="w-full grid md:grid-cols-2 gap-6 items-end">
             <flux:field>
                 <flux:label class="text-sm font-medium flex gap-2"> <span>نام و نام خانوادگی</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
-                <flux:description>نام و نام خانوادگی شخص معتکف</flux:description>
+{{--                <flux:description>نام و نام خانوادگی شخص معتکف</flux:description>--}}
                 <flux:input
                     wire:model="full_name"
                     class:input="text-right focus:outline-none hover:shadow-lg focus:shadow-lg focus:shadow-seccondary/20 hover:shadow-seccondary/20  transition-shadow duration-200"
@@ -21,7 +21,7 @@
 
             <flux:field>
                 <flux:label class="text-sm font-medium flex gap-2"> <span>سال تولد</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
-                <flux:description>سال تولد خود را در کادر زیر انتخاب کنید</flux:description>
+{{--                <flux:description>سال تولد خود را در کادر زیر انتخاب کنید</flux:description>--}}
                 <flux:select
                     wire:model="birth_date" placeholder="سال تولد خود را انتخاب کنید">
                     <flux:select.option value="null" key="null" >برای انتخاب کلیک کنید</flux:select.option>
@@ -37,7 +37,7 @@
 
             <flux:field>
                 <flux:label class="text-sm font-medium flex gap-2"> <span>جنسیت</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
-                <flux:description>این اعتکاف مخصوص پسران میباشد</flux:description>
+{{--                <flux:description>این اعتکاف مخصوص پسران میباشد</flux:description>--}}
                 <flux:select
                 wire:model="gender" placeholder="جنسیت را انتخاب کنید">
                     <flux:select.option value="male" key="male" >پسر</flux:select.option>
@@ -47,7 +47,7 @@
 
             <flux:field >
                 <flux:label class="text-sm font-medium flex gap-2"> <span>کد ملی</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
-                <flux:description>هنگام ورود کد ملی را به یاد داشته باشید</flux:description>
+{{--                <flux:description>هنگام ورود کد ملی را به یاد داشته باشید</flux:description>--}}
                 <flux:input
                     wire:model="national_code"
                     class="text-right focus:outline-none "
