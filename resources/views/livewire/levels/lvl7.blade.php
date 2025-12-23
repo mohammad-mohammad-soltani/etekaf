@@ -42,6 +42,7 @@
                 <flux:select.option value="true" >حافظ بیش از پنج جزء از  قرآن کریم یا فرزند شهید هستم</flux:select.option>
             </flux:select>
         </div>
+
         <flux:button
             variant="primary"
             wire:click="next_step"

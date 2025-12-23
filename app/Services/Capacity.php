@@ -18,7 +18,7 @@ class Capacity
             'muhandis' => 140,
             'soleimani' => 90,
             'nasrallah' => 0,
-            'yamen' => 165,
+            'yamen' => 160, // پنج تا ظرفیت برا افراد متفرقه و لحظه آخری خالی شد
         ];
         return $capacity[$location] -  EtekafUsers::where('location', $location)->count();
 
