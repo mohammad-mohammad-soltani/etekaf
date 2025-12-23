@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Services\Pay;
 use Illuminate\Console\Command;
 use App\Models\EtekafUsers;
 use Carbon\Carbon;
@@ -15,11 +16,39 @@ class DeleteExpiredRequests extends Command
     {
         $threshold = Carbon::now()->subMinutes(30);
 
-        $deleted = EtekafUsers::where('payment_status', 'pending')
+        $requests = EtekafUsers::where('payment_status', 'pending')
             ->where('created_at', '<', $threshold)
-            ->delete();
+            ->get();
 
-        $this->info("$deleted requests deleted.");
+        $deletedCount = 0;
+
+        foreach ($requests as $request) {
+
+            if (empty($request->track_id)) {
+                $request->delete();
+                $deletedCount++;
+                continue;
+            }
+
+            try {
+                if (!Pay::verify($request->track_id)) {
+                    $request->delete();
+                    $deletedCount++;
+                } else {
+                    $request->update(['payment_status' => 'approved']);
+                }
+            } catch (\Throwable $e) {
+                \Log::error('Payment verify failed', [
+                    'request_id' => $request->id,
+                    'track_id'   => $request->track_id,
+                    'error'      => $e->getMessage(),
+                ]);
+            }
+        }
+
+
+        $this->info("$deletedCount requests deleted.");
     }
+
 }
 
