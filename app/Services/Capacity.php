@@ -37,7 +37,8 @@ class Capacity
             'yamen' => 165,
         ];
         try {
-            return ($capacity[$location] / ($capacity[$location] -  EtekafUsers::where('location', $location)->count()) * 100) - 100;
+            return (EtekafUsers::where('location', $location)->count() / $capacity[$location]) * 100;
+
         }catch (\DivisionByZeroError $exception){
             return 0;
         }
