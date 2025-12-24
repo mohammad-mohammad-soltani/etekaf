@@ -37,7 +37,7 @@ class SMS
             ],
         ]);
 //        Log::info($response->json());
-        return $response->json();
+        return $response->status() == 200 ? 'true' : 'false '.$response->json()['meta']['message'];
     }
     public static function SendOTP($phone, $otp)
     {
