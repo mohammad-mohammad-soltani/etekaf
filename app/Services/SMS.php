@@ -36,7 +36,7 @@ class SMS
                 'code' => $track_id,
             ],
         ]);
-        Log::info($response->json());
+//        Log::info($response->json());
         return $response->json();
     }
     public static function SendOTP($phone, $otp)

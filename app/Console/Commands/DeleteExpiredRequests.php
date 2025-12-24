@@ -36,7 +36,7 @@ class DeleteExpiredRequests extends Command
                 if (!Pay::verify($request->track_id)) {
                     $request->delete();
                     $deletedCount++;
-                    Log::Log('User '.$request->phone_number.' location: '.$request->location.' track_id: '.$request->track_id.' was deleted');
+                    Log::info('User '.$request->phone_number.' location: '.$request->location.' track_id: '.$request->track_id.' was deleted');
                 } else {
                     $request->update(['payment_status' => 'approved']);
                     SMS::send_success($request->phone_number , $request->location , $request->track_id);
