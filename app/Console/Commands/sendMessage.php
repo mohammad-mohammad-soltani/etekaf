@@ -29,7 +29,7 @@ class sendMessage extends Command
     {
         $from = $this->argument('from');
         $to = $this->argument('to');
-        $user = EtekafUsers::where('id' , '>' , $from)->where('id' , '<' , $to);
+        $user = EtekafUsers::where('id' , '>' , $from)->where('id' , '<=' , $to);
         foreach ($user->get() as $user) {
             $this -> info( SMS::send_success($user -> phone_number , $user -> location , $user -> track_id));
         }
