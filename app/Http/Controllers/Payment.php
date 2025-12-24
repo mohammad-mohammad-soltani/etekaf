@@ -14,7 +14,7 @@ class Payment extends Controller
         if(Pay::verify($track_id)){
             $item = EtekafUsers::where('track_id', $track_id)->first();
             $item -> update(['payment_status' => 'approved']);
-            SMS::send_success($item -> phone_number , $item -> location , $item -> track_id);
+//            SMS::send_success($item -> phone_number , $item -> location , $item -> track_id);
 
             return redirect() -> route('form', [
                 'completed' => 'success'
