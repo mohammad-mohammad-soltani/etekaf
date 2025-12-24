@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class SMS
 {
@@ -19,24 +20,24 @@ class SMS
         'haniyeh' => 'dy6ektqlznf867j',
         'deif' => '8dxh9gensf9w0qg',
     ];
-    public static function send_success($phone,$location){
+    public static function send_success($phone,$location,$track_id){
         $pattern = self::$patterns[$location];
         $response = Http::withHeaders([
-            'Accept'       => 'application/json',
-            'Content-Type' => 'application/json',
-            'Api-Key'      => 'YTA5NTI2ZTktMTNlMS00NzFkLThlYmQtYTY5NjVmN2MwODJlMjRmOTJiYzE3ZjI5ZWJiOTFlNWE1OTEzNTgyOTc3OWY=',
-        ])->post('https://api.iranpayamak.com/ws/v1/sms/pattern', [
-            'code' => $pattern,
-            'attributes' => [
-                'code' => 1234,
+            'Content-Type'  => 'application/json',
+            'Authorization' => 'YTBhYjFjYjAtMjE4MC00MTI5LWJjMWQtYTllNDI2M2NhY2YyYmM2ZGE4M2M0M2MzYTY4ZjcxZjNhZDkyMTk4NmY4YjQ=',
+        ])->post('https://edge.ippanel.com/v1/api/send', [
+            'sending_type' => 'pattern',
+            'from_number'  => '+983000505',
+            'code'         => $pattern,
+            'recipients'   => [
+                $phone,
             ],
-            'recipient'     => $phone,
-            'line_number'   => '50002178584000',
-            'number_format' => 'english',
+            'params'       => [
+                'code' => $track_id,
+            ],
         ]);
-
+        Log::info($response->json());
         return $response->json();
-        return "ok";
     }
     public static function SendOTP($phone, $otp)
     {
@@ -65,3 +66,5 @@ class SMS
         ];
     }
 }
+
+//App\Services\SMS::send_success('09140275311' , 1234);

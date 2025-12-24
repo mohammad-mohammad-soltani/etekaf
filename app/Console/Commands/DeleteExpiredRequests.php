@@ -3,9 +3,11 @@
 namespace App\Console\Commands;
 
 use App\Services\Pay;
+use App\Services\SMS;
 use Illuminate\Console\Command;
 use App\Models\EtekafUsers;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
 
 class DeleteExpiredRequests extends Command
 {
@@ -14,7 +16,7 @@ class DeleteExpiredRequests extends Command
 
     public function handle()
     {
-        $threshold = Carbon::now()->subMinutes(30);
+        $threshold = Carbon::now()->subSeconds(1);
 
         $requests = EtekafUsers::where('payment_status', 'pending')
             ->where('created_at', '<', $threshold)
@@ -34,8 +36,10 @@ class DeleteExpiredRequests extends Command
                 if (!Pay::verify($request->track_id)) {
                     $request->delete();
                     $deletedCount++;
+                    Log::log('User '.$request->phone_number.' location: '.$request->location.' track_id: '.$request->track_id.' was deleted');
                 } else {
                     $request->update(['payment_status' => 'approved']);
+                    SMS::send_success($request->phone_number , $request->location , $request->track_id);
                 }
             } catch (\Throwable $e) {
                 \Log::error('Payment verify failed', [
