@@ -30,5 +30,11 @@ class QuranSchools extends Seeder
             'now_capacity' => 0,
             'slug' => 'samen_alaeme_school'
         ]);
+        \App\Models\QuranSchools::create([
+            'school_name' => 'سبحات',
+            'max_capacity' => 15,
+            'now_capacity' => 0,
+            'slug' => 'samen_alaeme_school'
+        ]);
     }
 }
