@@ -55,6 +55,8 @@ class HomePage extends Component
                 }else{
                     return abort(409 );
                 }
+            }else{
+                return abort(404 );
             }
         }
         $status = request()->has('completed');

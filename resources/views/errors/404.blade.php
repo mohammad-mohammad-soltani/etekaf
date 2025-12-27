@@ -13,10 +13,8 @@
     @fluxScripts()
 </head>
 <body class="flex justify-center items-center flex-col items-center h-screen" dir="rtl" >
-    <h2 class="text-2xl font-black" >نوجوان قرآنی عزیز</h2>
-    <p>متاسفانه ظرفیت پیوند ایجاد شده برای مدرسه/موسسه قرآنی شما به پایان رسیده و دیگر از این طریق امکان ثبت نام وجود ندارد.</p>
-    <p>درصورت علاقه و باقی بودن ظرفیت میتوانید در بقیه محور های اعتکاف ثبت نام انجام دهید.</p>
-    <flux:button href="{{route('form')}}" >ثبت نام در لینک اصلی</flux:button>
+    <h2 class="text-2xl font-black" >صفحه ای که به دنبال آن بودید پیدا نشد</h2>
+    <flux:button href="{{route('form')}}" >بازگشت به صفحه اصلی</flux:button>
     @vite('resources/js/app.js')
 
 </body>

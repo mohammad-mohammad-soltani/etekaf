@@ -34,7 +34,7 @@ class QuranSchools extends Seeder
             'school_name' => 'سبحات',
             'max_capacity' => 15,
             'now_capacity' => 0,
-            'slug' => 'samen_alaeme_school'
+            'slug' => 'sobahat_school'
         ]);
     }
 }
