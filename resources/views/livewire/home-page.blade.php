@@ -29,7 +29,11 @@
                 @elseif($current_level == 4)
                     <livewire:levels.lvl4 />
                 @elseif($current_level == 5)
-                    <livewire:levels.lvl5 />
+                    @if($quran_school)
+                        <livewire:levels.lvl5 :school_name="$quran_school" />
+                    @else
+                        <livewire:levels.lvl5 />
+                    @endif
                 @elseif($current_level == 6)
                     <livewire:levels.lvl6 />
                 @elseif($current_level == 7)

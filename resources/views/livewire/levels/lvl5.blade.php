@@ -49,18 +49,32 @@
             </flux:field>
 
             <!-- Row 2 Col 2: School Name -->
-            <flux:field>
-                <flux:label class="text-sm font-medium flex gap-2"> <span>نام مدرسه</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
-                <flux:input
-                    wire:model="school_name"
-                    class="text-right focus:outline-none "
-                    class:input="text-right focus:outline-none hover:shadow-lg focus:shadow-lg focus:shadow-seccondary/20 hover:shadow-seccondary/20  transition-shadow duration-200"
-
-                    placeholder="نام مدرسه"
-                    type="text"
-                />
-                <flux:error name="school_name" />
-            </flux:field>
+            @if(!$school_name)
+                <flux:field>
+                    <flux:label class="text-sm font-medium flex gap-2"> <span>نام مدرسه</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
+                    <flux:input
+                        wire:model="school_name"
+                        class="text-right focus:outline-none "
+                        class:input="text-right focus:outline-none hover:shadow-lg focus:shadow-lg focus:shadow-seccondary/20 hover:shadow-seccondary/20  transition-shadow duration-200"
+                        placeholder="نام مدرسه"
+                        type="text"
+                    />
+                    <flux:error name="school_name" />
+                </flux:field>
+            @else
+                <flux:field>
+                    <flux:label class="text-sm font-medium flex gap-2"> <span>نام موسسه / مدرسه قرآنی</span><flux:badge color="rose" size="sm" ><span >الزامی</span></flux:badge></flux:label>
+                    <flux:input
+                        wire:model="school_name"
+                        class="text-right focus:outline-none "
+                        class:input="text-right focus:outline-none hover:shadow-lg focus:shadow-lg focus:shadow-seccondary/20 hover:shadow-seccondary/20  transition-shadow duration-200"
+                        placeholder="نام مدرسه"
+                        type="text"
+                        disabled
+                    />
+                    <flux:error name="school_name" />
+                </flux:field>
+            @endif
         </div>
 
         <!-- Submit Button -->

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Storage;
 
 
 Route::get('/', \App\Livewire\HomePage::class) -> name('form');
+Route::get('/quran/{quran_school_name}', \App\Livewire\HomePage::class) -> name('quran_form');
 //Route::get('/' , function () {
 //   return view('welcom');
 //});

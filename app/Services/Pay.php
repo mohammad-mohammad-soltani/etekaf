@@ -6,9 +6,10 @@ use Illuminate\Support\Facades\Http;
 
 class Pay
 {
+    public static string $merchant = '69426c03666ab9001e080eb0';
     public static function start_payment($amount){
         $response = Http::post('https://gateway.zibal.ir/v1/request' , [
-            'merchant' =>  '69426c03666ab9001e080eb0',
+            'merchant' =>  self::$merchant,
             'amount' => $amount,
             'callbackUrl' => route('payment.callback'),
         ]);
@@ -20,7 +21,7 @@ class Pay
     }
     public static function verify($trackId){
         $response = Http::post('https://gateway.zibal.ir/v1/verify' , [
-            'merchant' =>  '69426c03666ab9001e080eb0',
+            'merchant' =>  self::$merchant,
             'trackId' => $trackId,
         ]);
         return $response -> json()['result'] == 100 ||  $response -> json()['result'] == 200;

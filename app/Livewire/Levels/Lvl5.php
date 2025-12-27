@@ -18,6 +18,9 @@ class Lvl5 extends Component
 
     #[Validate('required|string|max:150', message:["school_name.required" => "نام مدرسه الزامی است", "school_name.max" => "نام مدرسه نباید بیشتر از 150 کاراکتر باشد"])]
     public $school_name;
+    public function mount($school_name = null){
+        $this -> school_name = $school_name;
+    }
 
     public function render()
     {

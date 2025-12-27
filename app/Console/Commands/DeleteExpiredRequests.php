@@ -2,12 +2,14 @@
 
 namespace App\Console\Commands;
 
+use App\Models\QuranSchools;
 use App\Services\Pay;
 use App\Services\SMS;
 use Illuminate\Console\Command;
 use App\Models\EtekafUsers;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
+use function PHPUnit\Framework\isNull;
 
 class DeleteExpiredRequests extends Command
 {

@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\EtekafUsers;
+use App\Models\QuranSchools;
 use App\Services\Pay;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Session;
@@ -35,29 +36,64 @@ class HomePage extends Component
         'quran_state' => null,
         'activity_area' => null,
     ];
+    #[Session('quran_school')]
+    public $quran_school = false;
+    #[Session('quran_school_slug')]
 
-    public function mount()
+    public $quran_school_slug = false;
+
+    public function mount($quran_school_name = null)
     {
+        if (!is_null($quran_school_name)) {
+            $this -> quran_school_slug = $quran_school_name;
+            $school = QuranSchools::where('slug', $quran_school_name);
+            if($school -> exists()){
+                $school = $school->first();
+                if($school -> now_capacity < $school->max_capacity){
+                    $this -> quran_school = $school -> school_name;
+                    $this -> user_data['location_selected'] = 'nasrallah';
+                }else{
+                    return abort(409 );
+                }
+            }
+        }
         $status = request()->has('completed');
         $fail = request()->has('payment_fail');
 
         if ($this->current_level == 1 && !$status && !$this -> end_of_form ) {
             session()->forget('user_data');
 
-            $this->user_data = [
-                'name' => null,
-                'gender' => null,
-                'birthyear' => null,
-                'national_code' => null,
-                'phone_number' => null,
-                'parent_number' => null,
-                'province' => null,
-                'school' => null,
-                'location_selected' => null,
-                'referral_source' => null,
-                'quran_state' => null,
-                'activity_area' => null,
-            ];
+            if($this -> quran_school){
+                $this->user_data = [
+                    'name' => null,
+                    'gender' => null,
+                    'birthyear' => null,
+                    'national_code' => null,
+                    'phone_number' => null,
+                    'parent_number' => null,
+                    'province' => null,
+                    'school' => null,
+                    'location_selected' => 'nasrallah',
+                    'referral_source' => null,
+                    'quran_state' => null,
+                    'activity_area' => null,
+                ];
+            }else{
+                $this->user_data = [
+                    'name' => null,
+                    'gender' => null,
+                    'birthyear' => null,
+                    'national_code' => null,
+                    'phone_number' => null,
+                    'parent_number' => null,
+                    'province' => null,
+                    'school' => null,
+                    'location_selected' => null,
+                    'referral_source' => null,
+                    'quran_state' => null,
+                    'activity_area' => null,
+                ];
+            }
 
         }elseif ($status){
             $this -> current_level = 9;
@@ -65,6 +101,7 @@ class HomePage extends Component
         } else if ($this->end_of_form) {
             $this->current_level = 9;
         }
+
         if($fail){
             $this -> end_of_form = false;
             $this->current_level = 10;
@@ -82,11 +119,13 @@ class HomePage extends Component
         foreach ($data as $key => $value) {
             $this->user_data[$key] = $value;
         }
-
         if ($this->current_level == 1) {
-            $this->current_level = 3;
+            $this->current_level = 4;
+        }else if($this -> current_level == 5 && $this->quran_school){
+            $this -> current_level = 7;
+        }else{
+            $this->current_level = $this->current_level + 1;
         }
-        $this->current_level = $this->current_level + 1;
 
         if ($this->current_level == 4) {
             $this->user_phone = session()->get('phone');
@@ -117,7 +156,16 @@ class HomePage extends Component
         ];
         $this->current_level = 4;
         $this->end_of_form = false;
-        return redirect() -> route('form' );
+        if($this -> quran_school){
+            session()->forget('quran_school');
+            $this -> reset('quran_school');
+            $slug = $this -> quran_school_slug;
+            session()->forget('quran_school_slug');
+            $this -> reset('quran_school_slug');
+            return redirect() -> route('quran_form' , $slug  );
+        }else{
+            return redirect() -> route('form' );
+        }
     }
 
     #[On('make_user')]
@@ -130,6 +178,11 @@ class HomePage extends Component
         }
         $payment_id = Pay::start_payment($amount);
         if ($payment_id) {
+            if($this -> quran_school){
+                $quran_school = $this -> quran_school_slug;
+            }else{
+                $quran_school = null;
+            }
             EtekafUsers::create([
                 'name' => $this->user_data['name'],
                 'birth_year' => $this->user_data['birth_date'],
@@ -144,6 +197,7 @@ class HomePage extends Component
                 'quran' => $this->user_data['quran_state'] ? 1 : 0,
                 'payment_status' => 'pending',
                 'track_id' => $payment_id,
+                'quran_school' => $quran_school
             ]);
             return redirect('https://gateway.zibal.ir/start/' . $payment_id);
         }

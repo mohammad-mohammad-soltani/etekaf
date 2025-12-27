@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(AdminGenerator::class);
+//        $this->call(AdminGenerator::class);
+        $this->call(QuranSchools::class);
         // User::factory(10)->create();
 
 //        User::factory()->create([
