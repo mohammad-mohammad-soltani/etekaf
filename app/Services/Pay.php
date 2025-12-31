@@ -24,6 +24,6 @@ class Pay
             'merchant' =>  self::$merchant,
             'trackId' => $trackId,
         ]);
-        return $response -> json()['result'] == 100 ||  $response -> json()['result'] == 200;
+        return $response -> json()['result'] == 100 ||  $response -> json()['result'] == 201;
     }
 }
