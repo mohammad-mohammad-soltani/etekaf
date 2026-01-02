@@ -15,6 +15,7 @@ class CheckUser extends Component
     }
     public function doSearch()
     {
+        $this->search_result = [];
         $value = trim($this->search_text);
 
         if (strlen($value) < 2) {
@@ -29,7 +30,23 @@ class CheckUser extends Component
         })
             ->limit(20)
             ->get();
+        $this->search_text = '';
 
     }
 
 }
+
+App\Models\EtekafUsers::create([
+    'national_code' => '6600332735',
+    'name'=> 'امیررضا نوربخش',
+    'birth_year' => '1393',
+    'school' => 'مدرسه لباف زاده',
+    'payment_status' => 'approved',
+    'phone_number' => '09372185676',
+    'parent_phone_number' => '09372185676',
+    'location' => 'sinwar',
+    'industry' => 'friends',
+    'quran' => 0,
+    'job' => null,
+    'track_id' => 4417186784
+]);
