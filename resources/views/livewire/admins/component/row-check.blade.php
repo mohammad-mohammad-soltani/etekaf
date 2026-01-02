@@ -8,9 +8,6 @@
     <td class=" py-4">
         {{$user -> national_code}}
     </td>
-    <td class=" py-4">
-        0{{$user -> phone_number}}
-    </td>
     <td class="px-2 py-4">
         {{\App\Services\Dictionary::location($user -> location)}}
     </td>

@@ -34,9 +34,6 @@
                         <th scope="col" class=" py-3 bg-neutral-secondary-soft font-medium">
                             کد ملی
                         </th>
-                        <th scope="col" class="py-3 font-medium">
-                            شماره تلفن
-                        </th>
                         <th scope="col" class="px-2 py-3 font-medium">
                             محور
                         </th>
@@ -51,9 +48,6 @@
                             :key="$search->id"
                         />
                     @endforeach
-
-
-
                         </tbody>
                 </table>
             </div>
