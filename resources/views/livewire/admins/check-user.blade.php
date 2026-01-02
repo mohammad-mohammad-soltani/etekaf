@@ -45,14 +45,16 @@
                         </th>
                     </tr>
                     </thead>
-                    <tbody>
-                    @foreach($search_result as $search)
-
-                        <livewire:admins.component.row-check :user="$search" />
+                    @foreach ($search_result as $search)
+                        <livewire:admins.component.row-check
+                            :user="$search"
+                            :key="$search->id"
+                        />
                     @endforeach
-{{--                    <livewire:admins.component.row-check :user="\App\Models\EtekafUsers::get()->first()" />--}}
 
-                    </tbody>
+
+
+                        </tbody>
                 </table>
             </div>
 
