@@ -11,7 +11,7 @@ Route::get('/quran/{quran_school_name}', \App\Livewire\HomePage::class) -> name(
 //});
 Route::middleware('auth:web')->group(function () {
     Route::prefix('monitor')->group(function () {
-        Route::get('/' , \App\Livewire\Admins\Dashboard::class) -> name('admin.dashboard') -> middleware('admin_role'); ;
+        Route::get('/' , \App\Livewire\Admins\Dashboard::class) -> name('dashboard') -> middleware('admin_role'); ;
         Route::get('/check' , \App\Livewire\Admins\CheckUser::class) -> name('admin.check') ; ;
     });
 });

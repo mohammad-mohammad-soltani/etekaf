@@ -12,7 +12,7 @@ class Login extends Component
     public $password;
     public function mount(){
         if(Auth::check()) {
-            return redirect()->route('admin.dashboard' );
+            return redirect()->route('dashboard' );
         }
     }
     public function render()
