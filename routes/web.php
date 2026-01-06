@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
 
-Route::get('/', \App\Livewire\HomePage::class) -> name('form');
+Route::get('/end_of', \App\Livewire\HomePage::class) -> name('form');
 Route::get('/quran/{quran_school_name}', \App\Livewire\HomePage::class) -> name('quran_form');
+Route::get('/verify_user/{national_code}' , \App\Livewire\Verify::class) -> name('verify');
+Route::get('/' , \App\Livewire\VerifyPortal::class) -> name('verify_main_page');
 //Route::get('/' , function () {
 //   return view('welcom');
 //});
