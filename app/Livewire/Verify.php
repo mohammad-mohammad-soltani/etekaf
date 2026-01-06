@@ -13,7 +13,7 @@ class Verify extends Component
     }
     public function render()
     {
-        $user = EtekafUsers::where('national_code', $this->national_code)->where('logged_in' , 1);
+        $user = EtekafUsers::where('national_code', $this->national_code);
         if($user->exists()){
             $user = $user -> first();
             return view('livewire.verify' , compact('user'));
