@@ -14,7 +14,7 @@
 </head>
 <body class="flex justify-center items-center flex-col items-center h-screen" dir="rtl" >
     <h2 class="text-2xl font-black" >صفحه ای که به دنبال آن بودید پیدا نشد</h2>
-    <flux:button href="{{route('form')}}" >بازگشت به صفحه اصلی</flux:button>
+    <flux:button href="{{route('verify_main_page')}}" >بازگشت به صفحه اصلی</flux:button>
     @vite('resources/js/app.js')
 
 </body>
